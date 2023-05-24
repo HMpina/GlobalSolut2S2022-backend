@@ -21,9 +21,9 @@
       "typeorm": "0.3.16"
    },
    "scripts": {
-      "build": "tsc -p",
+      "build": "tsc -p ./tsconfig.json",
       "dev": "nodemon src/index.ts",
-      "start": "cd dist &amp;&amp node src/index.js",
+      "start": "cd dist && node src/index.js",
       "typeorm": "typeorm-ts-node-commonjs"
    }
 }
