@@ -1,6 +1,7 @@
 {
    "name": "backend",
    "version": "0.0.1",
+   "license": "MIT",
    "description": "Awesome project developed with TypeORM.",
    "type": "commonjs",
    "devDependencies": {
@@ -20,8 +21,9 @@
       "typeorm": "0.3.16"
    },
    "scripts": {
+      "build": "tsc -p",
       "dev": "nodemon src/index.ts",
-      "start": "ts-node src/index.ts",
+      "start": "cd dist &amp;&amp node src/index.js",
       "typeorm": "typeorm-ts-node-commonjs"
    }
 }
