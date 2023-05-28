@@ -4,7 +4,7 @@ import { saveHint } from './controller/HintsController';
 import { getHint } from './controller/HintsController';
 import { updateHint } from './controller/HintsController';
 import { deleteHint } from './controller/HintsController';
-import { finishedHint } from './controller/HintsController';
+import { likedHint } from './controller/HintsController';
 const routes = Router()
  
 routes.get('/home', (request: Request, response: Response) => {
@@ -15,5 +15,5 @@ routes.post('/hints', saveHint)
 routes.get('/hints/:id', getHint)
 routes.put('/hints/:id', updateHint)
 routes.delete('/hints/:id', deleteHint)
-routes.patch('/hints/:id', finishedHint)
+routes.patch('/hints/:id', likedHint)
 export default routes

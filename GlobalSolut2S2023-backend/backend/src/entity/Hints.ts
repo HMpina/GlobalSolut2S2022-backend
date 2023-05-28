@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from 'typeorm';
 @Entity()
-export class Tasks{
+export class Hints{
     @PrimaryGeneratedColumn()
     id: number;
     @Column()
@@ -10,7 +10,7 @@ export class Tasks{
     @Column({
         default: false
     })
-    finished: boolean;
+    liked: boolean;
     @CreateDateColumn()
     create_at: Date;
     @UpdateDateColumn()

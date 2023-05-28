@@ -35,14 +35,14 @@ export const deleteHint = async(request: Request, response: Response) => {
         return response.status(404).json( {message: 'Dica não encontrada!'} )
     }
 };
-export const finishedHint = async(request: Request, response: Response) => {
+export const likedHint = async(request: Request, response: Response) => {
     const {id} = request.params
     const hint = await getRepository(Hints).update(id, {
-        finished: true,
+        liked: true,
     })
     if (hint.affected == 1){
-        const hintFinished = await getRepository(Hints).findOneById(id)
-        return response.json(hintFinished);
+        const hintLiked = await getRepository(Hints).findOneById(id)
+        return response.json(hintLiked);
     }
     else{
         return response.status(404).json( {message: 'Dica não encontrada!'} )
